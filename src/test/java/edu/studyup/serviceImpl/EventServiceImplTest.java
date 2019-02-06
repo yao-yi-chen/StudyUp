@@ -68,12 +68,27 @@ class EventServiceImplTest {
 		assertEquals("Renamed Event 1", DataStorage.eventData.get(eventID).getName());
 	}
 	
+
 	@Test
-	void testUpdateEvent_WrongEventID_badCase() {
-		int eventID = 3;
+    @Disabled
+	void testUpdateEvent_badCase() {
+		Event event = null;
 		Assertions.assertThrows(StudyUpException.class, () -> {
-			eventServiceImpl.updateEventName(eventID, "Renamed Event 3");
+			eventServiceImpl.updateEventName(event);
 		  });
 	}
+	@Test
+	@Disabled
+	void testUpdateMethod_event_null_badcases() {
+		Event event = null;
+		Assertions.assertThrows(StudyUpException.class,() -> {
+				eventServiceImpl.updateEventName(event);
+		});
+		
+		
+		
+		
+	}
+	
 	
 }
