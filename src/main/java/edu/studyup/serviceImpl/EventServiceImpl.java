@@ -76,4 +76,9 @@ public class EventServiceImpl implements EventService {
 		return DataStorage.eventData.remove(eventID);
 	}
 
+	public void updateEventName(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

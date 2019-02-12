@@ -70,15 +70,15 @@ class EventServiceImplTest {
 	
 
 	@Test
-    @Disabled
+  //  @Disabled
 	void testUpdateEvent_badCase() {
 		Event event = null;
 		Assertions.assertThrows(StudyUpException.class, () -> {
-			eventServiceImpl.updateEventName(event);
+			eventServiceImpl.testupdateEvent(event);
 		  });
 	}
 	@Test
-	@Disabled
+//	@Disabled
 	void testUpdateMethod_event_null_badcases() {
 		Event event = null;
 		Assertions.assertThrows(StudyUpException.class,() -> {
