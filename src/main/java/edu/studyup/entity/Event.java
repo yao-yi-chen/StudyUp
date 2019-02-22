@@ -45,13 +45,13 @@ public class Event {
 		this.students = students;
 	}
 
-	public Date getDate() {
-		return date;
-	}
+	//public Date getDate() {
+		//return date;
+	//}
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
+	//public void setDate(Date date) {
+		//this.date = date;
+	//}
 
 	public int getEventID() {
 		return eventID;
