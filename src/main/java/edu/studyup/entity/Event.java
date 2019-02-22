@@ -19,7 +19,7 @@ public class Event {
 	private String name;
 	private Location location;
 	private List<Student> students;
-	private Date date;
+	//private Date date;
 
 	public String getName() {
 		return name;
