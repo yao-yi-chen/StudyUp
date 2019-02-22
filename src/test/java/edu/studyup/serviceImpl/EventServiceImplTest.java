@@ -43,11 +43,6 @@ class EventServiceImplTest {
 		student.setEmail("JohnDoe@email.com");
 		student.setId(1);
 		
-		Student student1 = new Student();
-		student1.setFirstName("F");
-		student1.setLastName("L");
-		student1.setEmail("aaa@google.com");
-		student1.setId(0);
 		
 		Student student2 = new Student();
 		student2.setFirstName("YI");
@@ -225,15 +220,7 @@ class EventServiceImplTest {
 		
 		DataStorage.eventData.put(event91.getEventID(), event91);
 		
-		Event event15 = new Event();
-		event15.setEventID(4);
-		event15.setDate(new Date());
-		event15.setName("Event 4");
-		Location location15 = new Location(-11111, 267);
-		event15.setLocation(location15);
-		List<Student> eventStudents15 = new ArrayList<>();
-		eventStudents.add(student);
-		event15.setStudents(eventStudents15);
+	
 		
 		DataStorage.eventData.put(event4.getEventID(), event4);
 		
@@ -555,16 +542,7 @@ class EventServiceImplTest {
 		
 		DataStorage.eventData.put(event10.getEventID(), event10);
 	
-		Event event11 = new Event();
-		event11.setEventID(1);
-		event11.setDate(new Date());
-		event11.setName("Event 1");
-		Location location11 = new Location(-122, 37);
-		event11.setLocation(location11);
-		List<Student> eventStudents1 = new ArrayList<>();
-		eventStudents1.add(student);
-		eventStudents1.add(student2);
-		event11.setStudents(eventStudents1);
+		
 	
 		Event event12 = new Event();
 		event12.setEventID(2);
