@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#error checking
 set -e
 
 # specify the path for nginx (primary) configuation file 
@@ -19,6 +20,8 @@ fi
 # IP = $1,declare -r -x???
 # update the testing url, use sed to edit the filename, s#pattern#replacement#p,match pattern and print replacement only,  update the filename in the config file 
 #/ to separate filename path, * to match every file within the path
+#update ip address directly in the file $path
+
 current=$(sed -En 's/.*server\s(.+?):6379;.*/\1/p' $path)
 
 
@@ -27,10 +30,10 @@ if [[ "$current" != "ip" ]]; then
     sed -i'' -E "s/server\s(.+?):6379/server $ip:6379/" $path 
 #reload the configuration to redirect nginx
     /usr/sbin/nginx -s reload
-    echo "hot-swap to the updating new ip address""
+    echo "hot-swap to the updating new ip address"
 else
     # print warning message
-    echo "'ip' already been allocated, hotswap failed""
+    echo "'ip' already been allocated, hotswap failed"
     exit 1
 fi
 
