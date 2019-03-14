@@ -19,8 +19,7 @@ fi
 # IP = $1,declare -r -x???
 # update the testing url, use sed to edit the filename, s#pattern#replacement#p,match pattern and print replacement only,  update the filename in the config file 
 #/ to separate filename path, * to match every file within the path
-current=$(sed /i 's/server\s(.+?):6379/'ip' ' $path)
-
+current=$(sed -En 's/.*server\s(.+?):6379;.*/\1/p' $path)
 
 
 # ec
